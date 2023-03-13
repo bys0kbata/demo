@@ -5,13 +5,15 @@ package com.example.demo;
  */
 
 
+
+import java.awt.*;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleButton;
+import javafx.scene.text.Text;
 
 public class HelloController {
 
@@ -22,16 +24,25 @@ public class HelloController {
     private URL location;
 
     @FXML
+    private Text freeVal;
+
+    @FXML
+    private Text freefile;
+
+    @FXML
     private ToggleButton oneApplyButton;
 
     @FXML
     private TextField onePass;
 
     @FXML
-    private Button startButton;
+    private Text oneVal;
 
     @FXML
-    private TableView<?> tableView;
+    private Text onefile;
+
+    @FXML
+    private Button startButton;
 
     @FXML
     private ToggleButton threeApplyButton;
@@ -44,6 +55,13 @@ public class HelloController {
 
     @FXML
     private TextField twoPass;
+
+    @FXML
+    private Text twoVal;
+
+    @FXML
+    private Text twofile;
+
 
     @FXML
     void initialize() {
@@ -61,7 +79,7 @@ public class HelloController {
             thirdPass[0] =threePass.getText();
         });
         startButton.setOnAction(actionEvent -> {
-            System.out.println(thirstPass[0]);
+            MyPane.panel();
         });
 
     }
