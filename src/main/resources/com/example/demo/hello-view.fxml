@@ -10,16 +10,16 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane id="onePyth" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="495.0" prefWidth="766.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<Pane id="onePyth" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="448.0" prefWidth="668.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.HelloController">
    <children>
-      <Label layoutY="-5.0" prefHeight="67.0" prefWidth="766.0" style="-fx-background-color: #e6bd4e;" />
-      <TextField id="twoPyth" layoutX="71.0" layoutY="145.0" prefHeight="26.0" prefWidth="186.0" styleClass="twoPyth" />
-      <TextField id="freePyth" layoutX="71.0" layoutY="190.0" prefHeight="26.0" prefWidth="186.0" styleClass="freePyth" />
-      <ToggleButton layoutX="258.0" layoutY="99.0" mnemonicParsing="false" text="Применить" />
-      <ToggleButton layoutX="258.0" layoutY="143.0" mnemonicParsing="false" text="Применить" />
-      <ToggleButton layoutX="258.0" layoutY="188.0" mnemonicParsing="false" text="Применить" />
-      <TextField id="onePyth" layoutX="71.0" layoutY="101.0" prefHeight="26.0" prefWidth="186.0" styleClass="onePyth" />
-      <Button layoutX="698.0" layoutY="451.0" mnemonicParsing="false" text="Start" />
+      <Label layoutX="-8.0" layoutY="-13.0" prefHeight="67.0" prefWidth="682.0" style="-fx-background-color: #e6bd4e;" />
+      <TextField id="twoPyth" fx:id="twoPass" layoutX="71.0" layoutY="145.0" prefHeight="26.0" prefWidth="186.0" styleClass="twoPyth" />
+      <TextField id="freePyth" fx:id="threePass" layoutX="71.0" layoutY="190.0" prefHeight="26.0" prefWidth="186.0" styleClass="freePyth" />
+      <ToggleButton fx:id="oneApplyButton" layoutX="258.0" layoutY="99.0" mnemonicParsing="false" text="Применить" />
+      <ToggleButton fx:id="twoApplyButton" layoutX="258.0" layoutY="143.0" mnemonicParsing="false" text="Применить" />
+      <ToggleButton fx:id="threeApplyButton" layoutX="258.0" layoutY="188.0" mnemonicParsing="false" text="Применить" />
+      <TextField id="onePyth" fx:id="onePass" layoutX="71.0" layoutY="101.0" prefHeight="26.0" prefWidth="186.0" styleClass="onePyth" />
+      <Button fx:id="startButton" layoutX="607.0" layoutY="385.0" mnemonicParsing="false" text="Start" />
       <Text layoutX="202.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Впишите путь до папок" wrappingWidth="319.9830722808838">
          <font>
             <Font size="29.0" />
@@ -41,7 +41,7 @@
             <Font size="17.0" />
          </font>
       </Text>
-      <TableView layoutX="386.0" layoutY="100.0" prefHeight="200.0" prefWidth="235.0">
+      <TableView fx:id="tableView" layoutX="386.0" layoutY="100.0" prefHeight="200.0" prefWidth="235.0">
         <columns>
           <TableColumn id="tableFile" prefWidth="121.0" styleClass="tableFile" text="Кол-во файлов" />
           <TableColumn id="tableSize" prefWidth="112.0" styleClass="tableSize" text="Размер данных" />
