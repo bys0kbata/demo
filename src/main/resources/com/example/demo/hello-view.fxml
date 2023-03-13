@@ -40,7 +40,7 @@
          </font>
       </Text>
       <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Text layoutX="482.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Результаты" wrappingWidth="112.98307228088379">
+      <Text layoutX="483.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Результаты" wrappingWidth="112.98307228088379">
          <font>
             <Font size="22.0" />
          </font>
