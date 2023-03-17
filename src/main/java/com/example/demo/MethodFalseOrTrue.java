@@ -1,21 +1,36 @@
 package com.example.demo;
 
 import java.io.File;
-import java.util.Arrays;
 
 public class MethodFalseOrTrue {
-    private String[] onePyth;
 
-    File dirOne = new File(Arrays.toString(onePyth));
-
-    private String[] getValue;
-
-    void MethodFalseOTrue(String[] getName) {
-        this.onePyth = getName;
+    public long folderSize(File directory) {
+        long length = 0;
+        for (File file : directory.listFiles()) {
+            if (file.isFile())
+            {
+                length += file.length();
+            }
+            else
+            {
+                length += folderSize(file);
+            }
+        }
+        return length;
     }
-
-    long getDirFile()
-    {
-       return dirOne.length();
+    public int folderQuantity(File directory) {
+        int count = 0;
+        for (File file : directory.listFiles())
+        {
+            if (file.isFile())
+            {
+                count ++;
+            }
+            else
+            {
+                count += folderQuantity(file);
+            }
+        }
+        return count;
     }
 }

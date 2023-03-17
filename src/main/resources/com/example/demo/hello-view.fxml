@@ -8,19 +8,19 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane id="onePyth" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="448.0" prefWidth="745.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.HelloController">
+<Pane id="onePyth" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="448.0" prefWidth="730.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.HelloController">
    <children>
-      <Label layoutX="-8.0" layoutY="-13.0" prefHeight="67.0" prefWidth="756.0" style="-fx-background-color: #e6bd4e;" />
-      <TextField id="twoPyth" fx:id="twoPass" layoutX="71.0" layoutY="177.0" prefHeight="26.0" prefWidth="186.0" styleClass="twoPyth" />
-      <TextField id="freePyth" fx:id="threePass" layoutX="71.0" layoutY="233.0" prefHeight="26.0" prefWidth="186.0" styleClass="freePyth" />
-      <ToggleButton fx:id="oneApplyButton" layoutX="258.0" layoutY="128.0" mnemonicParsing="false" text="Применить" />
-      <ToggleButton fx:id="twoApplyButton" layoutX="258.0" layoutY="175.0" mnemonicParsing="false" text="Применить" />
-      <ToggleButton fx:id="threeApplyButton" layoutX="258.0" layoutY="231.0" mnemonicParsing="false" text="Применить" />
-      <TextField id="onePyth" fx:id="onePass" layoutX="71.0" layoutY="130.0" prefHeight="26.0" prefWidth="186.0" styleClass="onePyth" />
-      <Button fx:id="startButton" layoutX="607.0" layoutY="385.0" mnemonicParsing="false" text="Start" />
-      <Text layoutX="202.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Впишите путь до папок" wrappingWidth="319.9830722808838">
+      <Label layoutX="-8.0" layoutY="-13.0" prefHeight="67.0" prefWidth="748.0" style="-fx-background-color: #e6bd4e;" />
+      <TextField id="twoPyth" fx:id="twoPass" layoutX="81.0" layoutY="176.0" prefHeight="26.0" prefWidth="186.0" promptText="Путь к файлу" styleClass="twoPyth" />
+      <TextField id="freePyth" fx:id="threePass" layoutX="81.0" layoutY="232.0" prefHeight="26.0" prefWidth="186.0" promptText="Путь к файлу" styleClass="freePyth" />
+      <ToggleButton fx:id="oneApplyButton" layoutX="543.0" layoutY="129.0" mnemonicParsing="false" text="Применить" />
+      <ToggleButton fx:id="twoApplyButton" layoutX="543.0" layoutY="175.0" mnemonicParsing="false" text="Применить" />
+      <ToggleButton fx:id="threeApplyButton" layoutX="543.0" layoutY="231.0" mnemonicParsing="false" text="Применить" />
+      <TextField id="onePyth" fx:id="onePass" layoutX="81.0" layoutY="131.0" prefHeight="26.0" prefWidth="186.0" promptText="Путь к файлу" styleClass="onePyth" />
+      <Button fx:id="startButton" layoutX="288.0" layoutY="369.0" mnemonicParsing="false" text="Start" />
+      <Text layoutX="71.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Впишите путь до папок" textAlignment="CENTER" wrappingWidth="233.9830722808838">
          <font>
-            <Font size="29.0" />
+            <Font size="20.0" />
          </font>
       </Text>
       <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
@@ -40,18 +40,18 @@
          </font>
       </Text>
       <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Text layoutX="483.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Результаты" wrappingWidth="112.98307228088379">
+      <TextField fx:id="oneQueue" layoutX="341.0" layoutY="129.0" promptText="Номер очереди" />
+      <TextField fx:id="twoQueue" layoutX="341.0" layoutY="177.0" promptText="Номер очереди" />
+      <TextField fx:id="freeQueue" layoutX="341.0" layoutY="233.0" promptText="Номер очереди" />
+      <Text layoutX="333.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Впишите очередь выполнения" textAlignment="CENTER" wrappingWidth="233.9830722808838">
          <font>
-            <Font size="22.0" />
+            <Font size="20.0" />
          </font>
       </Text>
-      <Text layoutX="401.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Кол-во файлов" />
-      <Text layoutX="530.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Обьем занимаемой памяти" />
-      <Text fx:id="onefile" layoutX="425.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Text fx:id="oneVal" layoutX="596.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Text fx:id="twofile" layoutX="427.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Text fx:id="twoVal" layoutX="594.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Text fx:id="freefile" layoutX="429.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Text fx:id="freeVal" layoutX="594.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text layoutX="91.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Лабораторная 1 РПИС-12 Правдин Д.С." textAlignment="CENTER" wrappingWidth="548.9830722808838">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
    </children>
 </Pane>

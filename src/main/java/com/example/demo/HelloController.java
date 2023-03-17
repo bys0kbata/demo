@@ -1,19 +1,12 @@
 package com.example.demo;
 
-/**
- * Sample Skeleton for 'hello-view.fxml' Controller Class
- */
-
-
-
-import java.awt.*;
+import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleButton;
-import javafx.scene.text.Text;
 
 public class HelloController {
 
@@ -24,22 +17,16 @@ public class HelloController {
     private URL location;
 
     @FXML
-    private Text freeVal;
-
-    @FXML
-    private Text freefile;
+    private TextField freeQueue;
 
     @FXML
     private ToggleButton oneApplyButton;
 
     @FXML
-    private TextField onePass;
+    private  TextField onePass;
 
     @FXML
-    private Text oneVal;
-
-    @FXML
-    private Text onefile;
+    private TextField oneQueue;
 
     @FXML
     private Button startButton;
@@ -57,10 +44,9 @@ public class HelloController {
     private TextField twoPass;
 
     @FXML
-    private Text twoVal;
-
-    @FXML
-    private Text twofile;
+    private TextField twoQueue;
+    public double fileSize;
+    public int fileQuantity;
 
 
     @FXML
@@ -68,18 +54,27 @@ public class HelloController {
         final String[] thirstPass = new String[1];
         final String[] secondPass = new String[1];
         final String[] thirdPass = new String[1];
+        final String[] onQueue = new String[1];
+        final String[] twQueue = new String[1];
+        final String[] freQueue = new String[1];
         oneApplyButton.setOnAction(actionEvent -> {
             thirstPass[0] =onePass.getText();
+            onQueue[0] = oneQueue.getText();
         });
         twoApplyButton.setOnAction(actionEvent -> {
 
             secondPass[0] =twoPass.getText();
+            twQueue[0]=twoQueue.getText();
         });
         threeApplyButton.setOnAction(actionEvent -> {
             thirdPass[0] =threePass.getText();
+            freQueue[0] = freeQueue.getText();
         });
         startButton.setOnAction(actionEvent -> {
-            MyPane.panel();
+            MethodFalseOrTrue man = new MethodFalseOrTrue();
+            fileSize = man.folderSize(new File(thirstPass[0]));
+            fileQuantity = man.folderQuantity(new File(thirstPass[0]));
+            MyPane.panel(fileSize,fileQuantity);
         });
 
     }
