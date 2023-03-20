@@ -45,18 +45,18 @@ public class HelloController {
 
     @FXML
     private TextField twoQueue;
-    public double fileSize;
-    public int fileQuantity;
+    public static double fileSize;
+    public static int fileQuantity;
+    static final String[] thirstPass = new String[1];
+    final String[] secondPass = new String[1];
+    final String[] thirdPass = new String[1];
+    final String[] onQueue = new String[1];
+    final String[] twQueue = new String[1];
+    final String[] freQueue = new String[1];
 
 
     @FXML
     void initialize() {
-        final String[] thirstPass = new String[1];
-        final String[] secondPass = new String[1];
-        final String[] thirdPass = new String[1];
-        final String[] onQueue = new String[1];
-        final String[] twQueue = new String[1];
-        final String[] freQueue = new String[1];
         oneApplyButton.setOnAction(actionEvent -> {
             thirstPass[0] =onePass.getText();
             onQueue[0] = oneQueue.getText();
@@ -69,14 +69,28 @@ public class HelloController {
         threeApplyButton.setOnAction(actionEvent -> {
             thirdPass[0] =threePass.getText();
             freQueue[0] = freeQueue.getText();
+
         });
         startButton.setOnAction(actionEvent -> {
-            MethodFalseOrTrue man = new MethodFalseOrTrue();
-            fileSize = man.folderSize(new File(thirstPass[0]));
-            fileQuantity = man.folderQuantity(new File(thirstPass[0]));
-            MyPane.panel(fileSize,fileQuantity);
+            Theardrh mSecondThread = new Theardrh(thirstPass[0],"Первая");
+            Theardrh mSecondThread1 = new Theardrh(secondPass[0],"Вторая");
+            Theardrh mSecondThread2 = new Theardrh(thirdPass[0],"Третья");
+            mSecondThread.setPriority(Integer.parseInt(onQueue[0]));
+            mSecondThread1.setPriority(Integer.parseInt(twQueue[0]));
+            mSecondThread2.setPriority(Integer.parseInt(freQueue[0]));
+            mSecondThread.start();
+            try {
+                Thread.sleep(10000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+            mSecondThread1.start();
+            try {
+                Thread.sleep(10000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+            mSecondThread2.start();
         });
-
     }
-
 }
